@@ -3,16 +3,33 @@
     --profile-icon-account: 48px;
     --gap-between-dropdown-icons: 0.75rem;
     --gap-between-dropdown-content: 1rem;
+    --gap-between-dropdown-menu: 0.5rem;
+}
+
+/* Utility Class */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Website Dropdown Menu */
 .website-dropdown-menu {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     float: right;
     font-family: 'Roboto', sans-serif;
     gap: 1rem;
-    padding: 0.5rem;
+    padding: var(--gap-between-dropdown-menu);
 }
 
 .account-image {
@@ -23,8 +40,6 @@
 }
 
 .account {
-    display: flex;
-    flex-direction: column;
     gap: 0.5rem;
 }
 
@@ -33,9 +48,17 @@
 }
 
 /* Dropdown Content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
 .dropdown-content {
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    top: calc(100% + var(--gap-between-dropdown-menu));
+    background-color: blue;
+    padding: 10px;
+    min-width: 160px;
     gap: var(--gap-between-dropdown-content);
 }
 
