@@ -14,6 +14,13 @@
     padding: 0.5rem;
 }
 
+.account-image {
+    width: var(--profile-icon-account);
+    height: var(--profile-icon-account);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .account {
     display: flex;
     flex-direction: column;
