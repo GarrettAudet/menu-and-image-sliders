@@ -1,0 +1,36 @@
+:root {
+    --default-icon-account: 24px;
+    --profile-icon-account: 48px;
+    --gap-between-dropdown-icons: 0.75rem;
+}
+
+/* Website Dropdown Menu */
+.website-dropdown-menu {
+    display: flex;
+    align-items: center;
+    float: right;
+    font-family: 'Roboto', sans-serif;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.account-name {
+    font-weight: bold;
+}
+
+/* Header Icons */
+.fa-bell,
+.fa-magnifying-glass,
+{
+font-size: var(--default-icon-account);
+}
+
+.fa-user {
+    font-size: var(--profile-icon-account);
+}
