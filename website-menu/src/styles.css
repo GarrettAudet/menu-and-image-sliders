@@ -2,6 +2,7 @@
     --default-icon-account: 24px;
     --profile-icon-account: 48px;
     --gap-between-dropdown-icons: 0.75rem;
+    --gap-between-dropdown-content: 1rem;
 }
 
 /* Website Dropdown Menu */
@@ -31,6 +32,13 @@
     font-weight: bold;
 }
 
+/* Dropdown Content */
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-between-dropdown-content);
+}
+
 /* Header Icons */
 .fa-bell,
 .fa-magnifying-glass,
@@ -38,6 +46,12 @@
 font-size: var(--default-icon-account);
 }
 
-.fa-user {
-    font-size: var(--profile-icon-account);
+.dropdown-content i {
+    font-size: 1rem;
+    padding: 0rem 0.75rem 0rem 0.5rem;
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
 }
