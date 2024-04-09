@@ -4,8 +4,8 @@
     --gap-between-dropdown-icons: 0.75rem;
     --gap-between-dropdown-content: 1rem;
     --gap-between-dropdown-menu: 0.5rem;
-    --dropdown-content-color: white;
-    --dropdown-background-color: black;
+    --dropdown-content-color: black;
+    --dropdown-background-color: white;
 }
 
 /* Utility Class */
@@ -21,6 +21,11 @@
 .flex-column {
     display: flex;
     flex-direction: column;
+}
+
+.hidden {
+    display: none;
+    transform: 5s;
 }
 
 /* Website Dropdown Menu */
@@ -65,13 +70,13 @@
 }
 
 .dropdown-content {
-    display: none;
     position: absolute;
     top: calc(100% + var(--gap-between-dropdown-menu));
     padding: 10px;
     min-width: 160px;
     gap: var(--gap-between-dropdown-content);
-    border-radius: 4px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
     z-index: 2;
 }
 

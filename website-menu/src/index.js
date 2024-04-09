@@ -1,8 +1,9 @@
 function addClickEventToChevron() {
   const chevron = document.querySelector('.fa-chevron-down');
+  const dropdownContent = document.querySelector('.dropdown-content');
   chevron.addEventListener('click', () => {
     chevron.classList.toggle('rotated');
-    console.log('test');
+    dropdownContent.classList.toggle('hidden');
   });
 }
 
