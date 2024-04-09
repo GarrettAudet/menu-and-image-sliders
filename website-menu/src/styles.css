@@ -8,10 +8,6 @@
     --dropdown-background-color: white;
 }
 
-body {
-    background-color: orange;
-}
-
 /* Utility Class */
 .flex {
     display: flex;
