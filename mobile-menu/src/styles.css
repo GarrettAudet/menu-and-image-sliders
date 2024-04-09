@@ -1,1 +1,36 @@
-:root {}
+:root {
+    --background-color: #191F38;
+    --font-color: white;
+    --font-size-header: 1.25rem;
+}
+
+/* Utility Class */
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* Header */
+.left-header {
+    gap: 0.5rem;
+}
+
+header {
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: var(--font-size-header);
+}
+
+/* Uniform Styles */
+body {
+    font-family: sans-serif;
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+
+@media only screen and (max-width: 600px) {
+    body {}
+}
