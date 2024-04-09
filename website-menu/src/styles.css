@@ -4,8 +4,8 @@
     --gap-between-dropdown-icons: 0.75rem;
     --gap-between-dropdown-content: 1rem;
     --gap-between-dropdown-menu: 0.5rem;
-    --dropdown-content-color: black;
-    --dropdown-background-color: white;
+    --dropdown-content-color: white;
+    --dropdown-background-color: black;
 }
 
 /* Utility Class */
@@ -72,7 +72,7 @@
 .dropdown-content {
     position: absolute;
     top: calc(100% + var(--gap-between-dropdown-menu));
-    padding: 10px;
+    padding: 15px;
     min-width: 160px;
     gap: var(--gap-between-dropdown-content);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -100,15 +100,14 @@ font-size: var(--default-icon-account);
 }
 
 .fa-chevron-down {
+    transition: transform 0.3s ease;
     transform-origin: center;
     transform: rotate(180deg);
     cursor: pointer;
 }
 
 .rotated {
-    padding-right: 0px;
-    transform: rotate(360deg);
-    transition: transform 0.3s ease;
+    transform: scaleY(1);
 }
 
 .dropdown-content i {
