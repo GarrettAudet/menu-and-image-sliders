@@ -4,8 +4,12 @@
     --gap-between-dropdown-icons: 0.75rem;
     --gap-between-dropdown-content: 1rem;
     --gap-between-dropdown-menu: 0.5rem;
-    --dropdown-content-color: white;
-    --dropdown-background-color: black;
+    --dropdown-content-color: black;
+    --dropdown-background-color: white;
+}
+
+body {
+    background-color: orange;
 }
 
 /* Utility Class */
@@ -72,24 +76,27 @@
 .dropdown-content {
     position: absolute;
     top: calc(100% + var(--gap-between-dropdown-menu));
-    padding: 15px;
+    padding: 20px;
     min-width: 160px;
     gap: var(--gap-between-dropdown-content);
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    z-index: 2;
+    background-color: var(--dropdown-background-color);
+    filter: drop-shadow(2px 2px 4px black);
+    z-index: 1;
 }
 
 .dropdown-content::before {
     content: '';
     position: absolute;
-    top: calc(0% - 8px);
-    right: var(--gap-between-dropdown-menu);
+    top: -8px;
+    right: -2px;
+    width: 0;
+    height: 0;
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
-    border-bottom: 9px solid var(--dropdown-background-color);
-    overflow: hidden;
-    z-index: 1;
+    border-bottom: 9px solid #fff;
+    transform: translateX(-50%);
+    z-index: 2;
 }
 
 /* Header Icons */
