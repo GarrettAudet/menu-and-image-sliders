@@ -2,6 +2,9 @@
     --background-color: #191F38;
     --font-color: white;
     --font-size-header: 1.25rem;
+    --icon-size-header: 2.5rem;
+    --icon-color-header: #01BEE1;
+    --icon-color-separate: #202747;
 }
 
 /* Utility Class */
@@ -22,10 +25,17 @@ header {
     justify-content: space-between;
     font-weight: bold;
     font-size: var(--font-size-header);
+    border-bottom: 2px solid var(--icon-color-separate);
+}
+
+.fa-droplet {
+    font-size: var(--icon-size-header);
+    color: var(--icon-color-header);
 }
 
 /* Uniform Styles */
 body {
+    margin: 1rem;
     font-family: sans-serif;
     background-color: var(--background-color);
     color: var(--font-color);
