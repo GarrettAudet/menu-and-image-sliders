@@ -114,7 +114,7 @@ font-size: var(--default-icon-account);
 }
 
 .rotated {
-    transform: scaleY(1);
+    transform: rotateX(360deg);
 }
 
 .dropdown-content i {
