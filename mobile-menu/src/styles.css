@@ -39,13 +39,20 @@ header {
 
 /* Carousal */
 .carousal {
+    position: relative;
+    overflow: hidden;
     width: 100%;
     height: 33.33vh;
 }
 
-.carousal-slides {}
+.carousal-slides {
+    transition: transform 0.5s ease;
+}
 
-.carousal-slide {}
+.carousal-slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+}
 
 /* Uniform Styles */
 body {
