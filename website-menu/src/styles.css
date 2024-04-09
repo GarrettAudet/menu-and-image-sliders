@@ -23,10 +23,12 @@
 
 /* Website Dropdown Menu */
 .website-dropdown-menu {
-    box-sizing: border-box;
     display: flex;
-    align-items: center;
+    position: relative;
     float: right;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     gap: 1rem;
     padding: var(--gap-between-dropdown-menu);
@@ -48,10 +50,6 @@
 }
 
 /* Dropdown Content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
 
 .dropdown-content {
     position: absolute;
@@ -60,6 +58,9 @@
     padding: 10px;
     min-width: 160px;
     gap: var(--gap-between-dropdown-content);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 1;
 }
 
 /* Header Icons */
