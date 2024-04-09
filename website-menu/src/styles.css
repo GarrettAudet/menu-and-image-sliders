@@ -4,8 +4,8 @@
     --gap-between-dropdown-icons: 0.75rem;
     --gap-between-dropdown-content: 1rem;
     --gap-between-dropdown-menu: 0.5rem;
-    --dropdown-content-color: black;
-    --dropdown-background-color: white;
+    --dropdown-content-color: white;
+    --dropdown-background-color: black;
 }
 
 /* Utility Class */
@@ -28,10 +28,15 @@
     display: flex;
     position: relative;
     float: right;
-    align-items: center;
     justify-content: flex-end;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+}
+
+.header-wrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
     gap: 1rem;
     padding: var(--gap-between-dropdown-menu);
 }
@@ -60,6 +65,7 @@
 }
 
 .dropdown-content {
+    display: none;
     position: absolute;
     top: calc(100% + var(--gap-between-dropdown-menu));
     padding: 10px;
@@ -89,7 +95,15 @@ font-size: var(--default-icon-account);
 }
 
 .fa-chevron-down {
-    padding-right: var(--gap-between-dropdown-menu);
+    transform-origin: center;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.rotated {
+    padding-right: 0px;
+    transform: rotate(360deg);
+    transition: transform 0.3s ease;
 }
 
 .dropdown-content i {
