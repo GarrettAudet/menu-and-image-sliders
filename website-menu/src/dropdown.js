@@ -1,5 +1,5 @@
-function addClickEventToChevron() {
-  const dropdownToggles = document.querySelectorAll('.fa-chevron-down');
+function setupDropdowns() {
+  const dropdownToggles = document.querySelectorAll('.chevron-dropdown');
 
   dropdownToggles.forEach((toggle) => {
     toggle.addEventListener('click', function () {
@@ -10,4 +10,4 @@ function addClickEventToChevron() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', addClickEventToChevron);
+export { setupDropdowns };
