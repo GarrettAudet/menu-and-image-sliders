@@ -5,6 +5,7 @@
     --icon-size-header: 2.5rem;
     --icon-color-header: #01BEE1;
     --icon-color-separate: #202747;
+    --carousel-circle-unselected: #CEB992;
 }
 
 /* Utility Class */
@@ -33,7 +34,15 @@ header {
     justify-content: space-between;
     font-weight: bold;
     font-size: var(--font-size-header);
+}
+
+header,
+.carousel {
     border-bottom: 2px solid var(--icon-color-separate);
+}
+
+header,
+.carousel-circles {
     margin-bottom: 1rem;
 }
 
@@ -46,8 +55,9 @@ header {
 .carousel {
     position: relative;
     overflow: hidden;
+    gap: 1rem;
     width: 100%;
-    height: 33.33vh;
+    height: 40vh;
 }
 
 .carousel-slide-container {
@@ -103,6 +113,24 @@ header {
     transform: translate(25%, -50%) scale(0.70);
     opacity: 1;
     z-index: 1;
+}
+
+.carousel-circles {
+    color: var(--icon-color-header);
+    gap: 0.5rem;
+}
+
+.fa-circle.previous,
+.fa-circle.previous-further {
+    color: var(--carousel-circle-unselected);
+}
+
+.fa-circle.previous {
+    font-size: 0.75rem;
+}
+
+.fa-circle.previous-further {
+    font-size: 0.50rem;
 }
 
 /* Uniform Styles */
