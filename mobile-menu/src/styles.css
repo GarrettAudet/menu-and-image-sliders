@@ -75,9 +75,23 @@ header {
     height: 100%;
 }
 
-.carousel-slide.previous-slide {
-    opacity: 1;
+.carousel-slide.previous-slide::after,
+.carousel-slide.next-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
+    border-radius: 10px;
+}
+
+.carousel-slide.previous-slide {
+    transform: translate(-125%, -50%) scale(0.70);
+    opacity: 1;
+    z-index: 1;
 }
 
 .carousel-slide.current-slide {
@@ -86,8 +100,9 @@ header {
 }
 
 .carousel-slide.next-slide {
+    transform: translate(25%, -50%) scale(0.70);
     opacity: 1;
-    z-index: 2;
+    z-index: 1;
 }
 
 /* Uniform Styles */
