@@ -1,5 +1,6 @@
-import { manipulateDOM } from './dom-manipulation.js';
+import { manipulateDOM, setupCarousel } from './dom-manipulation.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   manipulateDOM();
+  setupCarousel();
 });
