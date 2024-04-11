@@ -16,47 +16,49 @@ function setupCarousel() {
   let currentSlideIndex = 0;
 
   function goToSlide(slideIndex) {
-    // Reset classes for all slides
     slides.forEach((slide, index) => {
       slide.classList.remove('current-slide', 'previous-slide', 'next-slide');
-      slide.style.display = 'none'; // Hide slide
+      slide.style.opacity = '0';
 
-      // Remove 'active' class from all circles
       circles[index].classList.remove('active');
     });
 
-    // Set the current slide
+    const prevSlideIndex = (slideIndex - 1 + slides.length) % slides.length;
+    const nextSlideIndex = (slideIndex + 1) % slides.length;
+
     slides[slideIndex].classList.add('current-slide');
+    slides[slideIndex].style.opacity = '1';
+
+    slides[prevSlideIndex].classList.add('previous-slide');
+    slides[prevSlideIndex].style.opacity = '0.5';
+
+    slides[nextSlideIndex].classList.add('next-slide');
+    slides[nextSlideIndex].style.opacity = '0.5';
+
     slides[slideIndex].style.display = 'block';
+
     circles[slideIndex].classList.add('active');
-
-    // Set previous and next slides
-    const previousIndex = (slideIndex - 1 + slides.length) % slides.length;
-    const nextIndex = (slideIndex + 1) % slides.length;
-
-    slides[previousIndex].classList.add('previous-slide');
-    slides[previousIndex].style.display = 'block'; // Or use visibility/opacity for transitions
-
-    slides[nextIndex].classList.add('next-slide');
-    slides[nextIndex].style.display = 'block'; // Or use visibility/opacity for transitions
 
     currentSlideIndex = slideIndex;
   }
 
   function showNextSlide() {
-    const nextSlideIndex = (currentSlideIndex + 1) % slides.length;
-    goToSlide(nextSlideIndex);
+    goToSlide((currentSlideIndex + 1) % slides.length);
   }
 
-  // Attach click event to circles
+  function showPreviousSlide() {
+    goToSlide((currentSlideIndex - 1 + slides.length) % slides.length);
+  }
+
   circles.forEach((circle, index) => {
     circle.addEventListener('click', () => goToSlide(index));
   });
 
-  // Start rotating slides
-  setInterval(showNextSlide, 5000);
+  const slideInterval = setInterval(showNextSlide, 5000);
 
-  goToSlide(0); // Initialize to the first slide
+  goToSlide(0);
+
+  return () => clearInterval(slideInterval);
 }
 
 export { manipulateDOM, setupCarousel };
