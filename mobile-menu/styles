@@ -1,0 +1,115 @@
+.carousal {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 33.33vh;
+}
+
+.carousal-slide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    /* position: relative; */
+    /* width: 500%; */
+    height: 100%;
+    /* overflow: hidden; */
+    transition: transform 0.5s ease;
+}
+
+.carousal-slide {
+    flex: 0 0 auto;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* position: absolute; */
+    /* width: calc(100%/3) top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+    opacity: 0.5;
+    flex-shrink: 0; */
+}
+
+.carousal-slide img {
+    width: 275px;
+    height: 185px;
+    border-radius: 10px;
+}
+
+.current-slide {
+    z-index: 2;
+    width: 30%;
+    opacity: 1;
+}
+
+.previous-slide,
+.next-slide {
+    z-index: 1;
+    width: 20%;
+    opacity: 0.5;
+}
+
+.previous-slide {
+    height: 90%;
+    left: 10%;
+    z-index: 1;
+}
+
+.next-slide {
+    height: 90%;
+    right: 10%;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles for individual slides */
+.carousel-slide-container img {
+    position: absolute;
+    width: auto;
+    /* Adjust width if you want to maintain aspect ratio */
+    width: 50%;
+    /* Ensure image doesn't exceed its container */
+    height: 33.33vh;
+    /* Ensure image doesn't exceed the container height */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Start at the center horizontally */
+    transform: translate(-50%, -50%);
+    /* Adjust for exact centering */
+    transition: transform 0.5s, opacity 0.5s;
+    /* Smooth transition for movement and fade */
+    border-radius: 10px;
+    /* Rounded corners if desired */
+}
+
+/* Z-index layering for the card-like effect */
+.carousel-slide-container img {
+    z-index: 1;
+    /* Base z-index for all images */
+    opacity: 0;
+    /* Make images transparent by default */
+}
+
+/* Example showing the first image as the active slide */
+.carousel-slide-container img:first-child {
+    z-index: 2;
+    /* Bring the active slide above others */
+    opacity: 1;
+    /* Make the active slide fully visible */
+}
